@@ -13,6 +13,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
+        
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
@@ -36,4 +58,41 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    
+    private void init()
+    {
+        if(isFirstOpening())
+        {
+            
+        }
+        if(!hasAccesstoken()){
+            moveToLogin();
+        }
+        
+    }
+
+    /**
+     * Shows the login activity
+     */
+    private void moveToLogin() {
+    }
+
+    /**check for the twitter access token
+     *
+     * @return true if accesstoen is avaliable, else false
+     */
+    private boolean hasAccesstoken() {
+        return false;
+    }
+
+    /**if the app is being oopend for the first time so we can show a
+     * quick intro of app
+     *
+     * @return true ig the app is open for the first time else false
+     */
+    private boolean isFirstOpening() {
+        return false;
+    }
+
+
 }
