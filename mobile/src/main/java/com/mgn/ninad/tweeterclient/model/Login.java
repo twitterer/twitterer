@@ -6,26 +6,26 @@ import android.databinding.BaseObservable;
 
 public class Login extends BaseObservable{
 
-    private string userName;
-    private string password;
+    private String userName;
+    private String password;
 
     @Bindable
-    public string getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(string userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
         notifyPropertyChanged(com.mgn.ninad.tweeterclient.model.BR.userName);
 
     }
 
     @Bindable
-    public string getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(string password) {
+    public void setPassword(String password) {
         this.password = password;
         notifyPropertyChanged(com.mgn.ninad.tweeterclient.model.BR.password);
 
