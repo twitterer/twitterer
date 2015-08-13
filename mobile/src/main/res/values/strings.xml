@@ -4,4 +4,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Login -->
+
+    <string name="login_hint_userName">Email</string>
+    <string name="login_hint_password">Password</string>
+
 </resources>

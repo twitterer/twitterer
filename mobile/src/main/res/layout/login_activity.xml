@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</LinearLayout>
+    <data>
+
+        <variable
+            name="login"
+            type="com.mgn.ninad.tweeterclient.model.Login" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_color">
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <EditText
+                android:id="@+id/edtLoginUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_default"
+                android:hint="@string/login_hint_userName"
+                android:inputType="textEmailAddress"
+                android:text="@{login.userName}"
+                android:textCursorDrawable="@null"></EditText>
+
+            <EditText
+                android:id="@+id/edtLoginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_margin_top"
+                android:background="@drawable/input_default"
+                android:hint="@string/login_hint_password"
+                android:inputType="textPassword"
+                android:text="@{login.password}"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llLogin"
+            android:layout_centerHorizontal="true"
+            android:onClick="onButtonClick"
+            android:text="Login" />
+    </RelativeLayout>
+</layout>
