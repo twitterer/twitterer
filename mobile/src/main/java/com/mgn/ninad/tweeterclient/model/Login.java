@@ -4,6 +4,8 @@ package com.mgn.ninad.tweeterclient.model;
 import android.databinding.Bindable;
 import android.databinding.BaseObservable;
 
+import com.mgn.ninad.tweeterclient.BR;
+
 public class Login extends BaseObservable{
 
     private String userName;
@@ -16,7 +18,8 @@ public class Login extends BaseObservable{
 
     public void setUserName(String userName) {
         this.userName = userName;
-        notifyPropertyChanged(com.mgn.ninad.tweeterclient.model.BR.userName);
+
+        notifyPropertyChanged(BR.userName);
 
     }
 
@@ -27,7 +30,7 @@ public class Login extends BaseObservable{
 
     public void setPassword(String password) {
         this.password = password;
-        notifyPropertyChanged(com.mgn.ninad.tweeterclient.model.BR.password);
+        notifyPropertyChanged(BR.password);
 
     }
 

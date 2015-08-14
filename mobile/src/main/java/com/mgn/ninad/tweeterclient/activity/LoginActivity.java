@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.mgn.ninad.tweeterclient.R;
+import com.mgn.ninad.tweeterclient.databinding.LoginActivityBinding;
 import com.mgn.ninad.tweeterclient.model.Login;
 
 public class LoginActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding =
+                LoginActivityBinding binding =
                 DataBindingUtil.setContentView(this, R.layout.login_activity);
     }
 
